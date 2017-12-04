@@ -15,7 +15,7 @@
 
 <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case1-1.gif" height="149" width="270"> <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case%201-2.gif" height="149" width="270"> 
 
-    + Case 2: Using PID for both steering and throttle values. Adding the percentages for them to mitigate the overshooting values.
+  + Case 2: Using PID for both steering and throttle values. Adding the percentages for them to mitigate the overshooting values.
 
 <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case2-1.gif" height="149" width="270"> <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case2-2.gif" height="149" width="270">
 
