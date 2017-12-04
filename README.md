@@ -1,10 +1,10 @@
-# CarND PID Controller
+# **PID Controller Project**
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
     
     Tung Thanh Le
     ttungl at gmail dot com
    
-**PID Control Project**
+
 ---
 
 #### Project description: 
