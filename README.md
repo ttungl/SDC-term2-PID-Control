@@ -27,13 +27,13 @@ This implementation followed the [rubric points](https://review.udacity.com/#!/r
 #### Discussion
 
 + Describes the effect of the P, I, D component of the PID algorithm in their implementation:
-  * Case 1:
+  * Case 1: Fixed throttle value around 30 mph.
     + P: [demo](https://youtu.be/tW18mDud1_Q)
     + PI: [demo](https://youtu.be/TtSkCDoeCaI)
     + PD: [demo](https://youtu.be/nuCv8yUmmYQ)
     + PID: [demo](https://youtu.be/-nDjcm7bBr8)
-    
-  * Case 2:
+
+  * Case 2: Using PID for both steering and throttle values.
     + P: [demo](https://youtu.be/NWOQzM9yhd4)
     + PI: [demo](https://youtu.be/ProArN8M0tg)
     + PD: [demo](https://youtu.be/UTgf1RHjhjc)
