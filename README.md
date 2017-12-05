@@ -28,10 +28,13 @@ This implementation followed the [rubric points](https://review.udacity.com/#!/r
 
 + Describes the effect of the P, I, D component of the PID algorithm in their implementation:
   * Case 1: Fixed throttle value around 30 mph.
-    + P: [demo](https://youtu.be/tW18mDud1_Q)
-    + PI: [demo](https://youtu.be/TtSkCDoeCaI)
-    + PD: [demo](https://youtu.be/nuCv8yUmmYQ)
-    + PID: [demo](https://youtu.be/-nDjcm7bBr8)
+    + P: This [demo](https://youtu.be/tW18mDud1_Q) demonstrates the proportional controller for controlling the car. This causes the car steering proportional to the car's distance from the center of the track (cross track error (CTE)). If the car goes to the right, it steers to the left.
+
+    + PI: This [demo](https://youtu.be/TtSkCDoeCaI) demonstrates the P-I controllers for controlling the car. Adding the integral controller helps reduce the CTE.
+
+    + PD: This [demo](https://youtu.be/nuCv8yUmmYQ) demonstrates the P-D controllers performance. Adding the derivative controller helps steering the car smoothly as well as reduce the CTE.
+
+    + PID: This [demo](https://youtu.be/-nDjcm7bBr8) performs the PID controller by combining three controllers. 
 
   * Case 2: Using PID for both steering and throttle values.
     + P: [demo](https://youtu.be/NWOQzM9yhd4)
