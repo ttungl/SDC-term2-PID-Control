@@ -11,11 +11,11 @@
 
 + The results are below with [video demo case 1](https://youtu.be/-nDjcm7bBr8) and [case 2](https://youtu.be/6dhbnDeH93Y) for a full lap.
 
-* Case 1: Fixed throttle value around 30 mph.
+  * Case 1: Fixed throttle value around 30 mph.
 
 <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case1-1.gif" height="149" width="270"> <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case%201-2.gif" height="149" width="270"> 
 
-* Case 2: Using PID for both steering and throttle values.
+  * Case 2: Using PID for both steering and throttle values.
 
 <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case2-1.gif" height="149" width="270"> <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case2-2.gif" height="149" width="270">
 
@@ -46,9 +46,7 @@ This implementation followed the [rubric points](https://review.udacity.com/#!/r
     + PD: This [demo](https://youtu.be/UTgf1RHjhjc) demonstrates the P-D controllers performance. 
     + PID: This [demo](https://youtu.be/6dhbnDeH93Y) performs the PID controller by combining three controllers. 
 
-+ Hyperparameter tuning/optimization:
-
 + Final hyperparameters chosen (P, I, D coefficients):
+  In this project, the PID controllers for steering and throttle are applied for controlling the car stay on the track. I have played around the hyperparamters from the lesson 16 PID (lecture 11) with hyperparameters [0.2, 0.004, 3.0]. If P of throttle is too high, the car is likely to run backward. For example, I added 3.0 instead of 0.32 in the "P" of PID throttle, the car started to run backward. If "D" is too high, the car will be likely to stop after crossing the bridge. Therefore, I have tunned around these hyperparameters and finalized them at [0.13500, 0.00025, 3.05000] for PID steering and [0.32000, 0.00000, 0.02255] for PID throttle. In addition, I added the percentages to the steering and throttle variables to mitigate the overshooting values. 
 
-+ Conclusion:
 
