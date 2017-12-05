@@ -37,8 +37,11 @@ int main()
   PID pid_steering, pid_throttle;
 
   // TODO: Initialize the pid_steering and pid_throttle variables.
-  pid_steering.Init(0.13500, 0.00025, 3.05000);
+  // pid_steering.Init(0.2, 0.004, 3.0); // 0.2, 0.004, 3.0
+  // pid_throttle.Init(0.1, 0.000, 0.02); // 
+  pid_steering.Init(0.13500, 0.00025, 3.05000); // 0.2, 0.004, 3.0
   pid_throttle.Init(0.32000, 0.00000, 0.02255);
+  
 
 
   h.onMessage([&pid_steering, &pid_throttle](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
@@ -85,6 +88,8 @@ int main()
           // case 2: adding percentage to steering and throttle to mitigate the overshooting values.
           msgJson["steering_angle"] = steer_value*0.81;
           msgJson["throttle"] = throttle_value*0.73; 
+          // msgJson["steering_angle"] = steer_value;
+          // msgJson["throttle"] = throttle_value; 
           
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           std::cout << msg << std::endl;

@@ -26,7 +26,7 @@ void PID::Init(double Kp, double Ki, double Kd) {
 	// tuning parameters
 	step_count = 1; 
 	num_init_steps = 50; 
-	num_eval_steps = 3000; 
+	num_eval_steps = 2000; 
 	total_error = 0.0;
 
 }
