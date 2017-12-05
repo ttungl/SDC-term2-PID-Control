@@ -15,7 +15,7 @@
 
 <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case1-1.gif" height="149" width="270"> <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case%201-2.gif" height="149" width="270"> 
 
-* Case 2: Using PID for both steering and throttle values (Added the percentages for them to mitigate the overshooting values).
+* Case 2: Using PID for both steering and throttle values.
 
 <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case2-1.gif" height="149" width="270"> <img src="https://github.com/ttungl/SDC-term2-PID-Control/blob/master/output/case2-2.gif" height="149" width="270">
 
@@ -27,20 +27,24 @@ This implementation followed the [rubric points](https://review.udacity.com/#!/r
 #### Discussion
 
 + Describes the effect of the P, I, D component of the PID algorithm in their implementation:
+  
+  * The Proportional Control (P): This causes the car steering proportionally to the car's distance from the center of the track (cross track error (CTE)). If the car goes to the right, it steers to the left. If "P" is too high, the oscillation will be large, and the car will be likely to waggle out of the track.
+
+  * The Integral Control (I): This sums up all the CTEs from all steps until that point of time, it helps prevent the car performing bias on a side of the track. If "I" is too high, the oscillation will be quicker and it retards the response to the speed. If it is too low, the car will be drifted on a side in a long term period.
+
+  * The Derivative Control (D): This helps the car correct the changes quickly (i.e. steering faster) and smoothly. If "D" is too high, it leads to steering changes of large angles, and if it is too low, it results in oscillation with overshooting. 
+
   * Case 1: Fixed throttle value around 30 mph.
-    + P: This [demo](https://youtu.be/tW18mDud1_Q) demonstrates the proportional controller for controlling the car. This causes the car steering proportional to the car's distance from the center of the track (cross track error (CTE)). If the car goes to the right, it steers to the left.
-
-    + PI: This [demo](https://youtu.be/TtSkCDoeCaI) demonstrates the P-I controllers for controlling the car. Adding the integral controller helps reduce the CTE.
-
-    + PD: This [demo](https://youtu.be/nuCv8yUmmYQ) demonstrates the P-D controllers performance. Adding the derivative controller helps steering the car smoothly as well as reduce the CTE.
-
+    + P: This [demo](https://youtu.be/tW18mDud1_Q) demonstrates the proportional controller for controlling the car. 
+    + PI: This [demo](https://youtu.be/TtSkCDoeCaI) demonstrates the P-I controllers for controlling the car. 
+    + PD: This [demo](https://youtu.be/nuCv8yUmmYQ) demonstrates the P-D controllers performance. 
     + PID: This [demo](https://youtu.be/-nDjcm7bBr8) performs the PID controller by combining three controllers. 
 
   * Case 2: Using PID for both steering and throttle values.
-    + P: [demo](https://youtu.be/NWOQzM9yhd4)
-    + PI: [demo](https://youtu.be/ProArN8M0tg)
-    + PD: [demo](https://youtu.be/UTgf1RHjhjc)
-    + PID: [demo](https://youtu.be/6dhbnDeH93Y)
+    + P: This [demo](https://youtu.be/NWOQzM9yhd4) demonstrates the proportional controller for controlling the car. 
+    + PI: This [demo](https://youtu.be/ProArN8M0tg) demonstrates the P-I controllers for controlling the car. 
+    + PD: This [demo](https://youtu.be/UTgf1RHjhjc) demonstrates the P-D controllers performance. 
+    + PID: This [demo](https://youtu.be/6dhbnDeH93Y) performs the PID controller by combining three controllers. 
 
 + Hyperparameter tuning/optimization:
 
